@@ -30,3 +30,14 @@ Params:
 - `exclude: enum(retweets, replies)` (Optional)
 
 Returns: JSON of response data
+
+### GET following
+Gets accounts that the user is following, by user ID.
+
+Endpoint: `api/following`
+
+Params:
+- `id : string`
+- `token: string` (Optional) - Pagination token to get more than 100 results
+
+Returns: `UserFollowingV2Paginator` in JSON format. Next token under `res["meta"]["next_token"]`
